@@ -1,26 +1,21 @@
-import './App.css'
-import Hero from './components/Hero';
-import Navbar from './components/CustomNavbar';
-import './index.css';
-import { useState } from 'react';
-import RightSide from './components/RightSide';
-import CustomNavbar from './components/CustomNavbar';
-import Dashboard from './dashboard/dashboard/Dashboard'
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Overview from "./pages/Overview";
+import Playground from "./pages/Playground";
+import Navbar from "./components/layout/Navbar";
+import Analytics from "./pages/Analytics";
 
-function App() {
-const [right,setright] = useState('')
+export default function App() {
   return (
-    <div>
-      {/* <CustomNavbar/>
-    <div className='flex gap-20 justify-center pt-5 p-20'>
+    <BrowserRouter>
+      <div className="min-h-screen bg-gray-50">
+        <Navbar />
 
-      <Hero setright={setright}/>
-      <RightSide rightside={right} />
-    </div> */}
-    <Dashboard/>
-    </div>
-    
-  )
+        <Routes>
+          <Route path="/" element={<Overview />} />
+          <Route path="/playground" element={<Playground />} />
+          <Route path="/analytics" element={<Analytics />} />
+        </Routes>
+      </div>
+    </BrowserRouter>
+  );
 }
-
-export default App

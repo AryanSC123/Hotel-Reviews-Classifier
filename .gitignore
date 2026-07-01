@@ -1,0 +1,29 @@
+# --- System / OS Cache ---
+.DS_Store
+Thumbs.db
+Log.log
+
+# --- Frontend (Node / Vite / React) Cache ---
+node_modules/
+frontend/node_modules/
+dist/
+frontend/dist/
+build/
+frontend/build/
+.env.local
+.env.production.local
+.env.development.local
+
+# --- Backend (Python) Cache ---
+__pycache__/
+backend/__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+backend/venv/
+.pytest_cache/
+.env
+backend/.env
