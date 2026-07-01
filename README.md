@@ -395,12 +395,6 @@ This ensures that refreshing any React Router route does not produce a 404 error
 
 ---
 
-# 📄 License
-
-This project is licensed under the MIT License.
-
----
-
 # 👨‍💻 Author
 
 **Aryan Chidumalla**
